@@ -22,15 +22,17 @@ namespace ProjectSurvivor
 
         void Start()
         {
-            // Code Here
-            "Hello QFramework".LogInfo();
-
             HurtBox.OnTriggerEnter2DEvent(coll =>
                 {
-                    
-                    this.DestroyGameObjGracefully();
-                    
-                    UIKit.OpenPanel<UIGameOverPanel>();
+                    var hitBox = coll.GetComponent<HitBox>();
+                    if (hitBox)
+                    {
+                        if (hitBox.Owner.CompareTag("Enemy"))
+                        {
+                            this.DestroyGameObjGracefully();
+                            UIKit.OpenPanel<UIGameOverPanel>();
+                        }
+                    }
                 })
                 .UnRegisterWhenGameObjectDestroyed(gameObject);
         }

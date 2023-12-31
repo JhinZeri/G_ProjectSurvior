@@ -18,16 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: ProjectSurvivor.Enemy
-      PathToRoot: Enemy
-      MemberName: Enemy
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: EnemyGenerator
+    ClassName: GameStartController
     Namespace: ProjectSurvivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace ProjectSurvivor\r\n{\r\n\tpublic
-      partial class EnemyGenerator : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class GameStartController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:f06606af-219d-4226-bed5-c076db6a6a0b\r\nusing UnityEngine;\r\n\r\nnamespace
-      ProjectSurvivor\r\n{\r\n\tpublic partial class EnemyGenerator\r\n\t{\r\n\r\n\t\tpublic
-      ProjectSurvivor.Enemy Enemy;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:6b202b46-6482-4b5c-8e19-7563a3dcf154\r\nusing UnityEngine;\r\n\r\nnamespace
+      ProjectSurvivor\r\n{\r\n\tpublic partial class GameStartController\r\n\t{\r\n\r\n\t}\r\n}\r\n"

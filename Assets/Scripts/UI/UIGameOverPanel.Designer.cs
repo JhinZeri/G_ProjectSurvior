@@ -5,16 +5,19 @@ using QFramework;
 
 namespace ProjectSurvivor
 {
-	// Generate Id:732de909-40e8-4da5-9b38-c25205a5db85
+	// Generate Id:b3d1ae6e-e26f-4b6e-a92a-3fb74545d464
 	public partial class UIGameOverPanel
 	{
 		public const string Name = "UIGameOverPanel";
 		
+		[SerializeField]
+		public UnityEngine.UI.Button BtnBackToStart;
 		
 		private UIGameOverPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
+			BtnBackToStart = null;
 			
 			mData = null;
 		}

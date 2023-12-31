@@ -14,17 +14,26 @@ namespace ProjectSurvivor
         protected override void OnInit(IUIData uiData = null)
         {
             mData = uiData as UIGamePassPanelData ?? new UIGamePassPanelData();
+
+            Time.timeScale = 0;
             // please add init code here
 
             ActionKit.OnUpdate.Register(() =>
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    Global.ResetData();
                     this.CloseSelf();
 
-                    SceneManager.LoadScene("SampleScene");
+                    SceneManager.LoadScene("Game");
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+            BtnBackToStart.onClick.AddListener(() =>
+            {
+                this.CloseSelf();
+                SceneManager.LoadScene("GameStart");
+            });
         }
 
         protected override void OnOpen(IUIData uiData = null)
@@ -41,6 +50,7 @@ namespace ProjectSurvivor
 
         protected override void OnClose()
         {
+            Time.timeScale = 1;
         }
     }
 }
